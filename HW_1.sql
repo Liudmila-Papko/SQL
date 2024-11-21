@@ -176,34 +176,6 @@ values (7, 2),
     (40, 13),
     (41, 3),
     (42, 7);
+
 insert into roles_employee(employee_id, role_id)
 values (1, 2);
-select * from roles_employee;
-
-select * from employees;
-select * from salary;
-select * from employees_salary;
-
-
-select e.employee_name, s.monthly_salary 
-from employees_salary as es
-join employees as e on e.id = es.employee_id
-join salary as s on s.id = es.salary_id
-
-select e.employee_name, s.monthly_salary 
-from employees_salary as es
-join employees as e on e.id = es.employee_id
-join salary as s on s.id = es.salary_id
-where s.monthly_salary < 2000;
-
-insert into salary(monthly_salary)
-values (3000),
-	   (3500);
-d
-select s.monthly_salary
-from employees_salary as es
-right join salary as s on s.id = es.salary_id
-where es.salary_id is null;
-
-
-
